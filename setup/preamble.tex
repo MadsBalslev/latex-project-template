@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+
+\usepackage[danish]{babel} % For Danish writing.
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=4cm]{geometry} % margins.
+
+% Adds support for full page background picture
+\usepackage[contents={},color=gray]{background}
+
+\usepackage{xcolor}
+\definecolor{aaublue}{RGB}{33,26,82}% dark blue
+
+%\usepackage[pdftex]{graphicx} % For pictures.
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts} % Math.
+
+\usepackage{hyperref} % Format links for pdf.
+\usepackage{lastpage} %Bruge til at få sidetal fra sidste side
+\usepackage{calc} % Reset counter after title page.
+
+% Bibliografi
+\usepackage{csquotes} 
+\usepackage[backend=biber]{biblatex}
+\bibliography{bib.bib}
+
+% Ændr titel på indholdfortegnelse
+\addto\captionsdanish{\renewcommand{\contentsname}{Indholdsfortegnelse}}
+

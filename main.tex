@@ -1,0 +1,24 @@
+\input{setup/preamble}
+\input{setup/metadata}
+\input{setup/macros}
+
+
+\begin{document}
+\input{Sektioner/forside}
+\input{Sektioner/infoside}
+
+\input{Sektioner/forord}
+
+% Sørger for at ToC er på sin egen side
+\newpage
+\tableofcontents
+\clearpage
+
+% Indholdet i rarpoten importeres herunder
+\input{Sektioner/indledning}
+
+% Til sidst kommer bibliografien
+\newpage
+\printbibliography
+
+\end{document}
