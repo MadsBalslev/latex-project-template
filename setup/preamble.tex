@@ -9,10 +9,22 @@
 
 \usepackage{xcolor}
 \definecolor{aaublue}{RGB}{33,26,82}% dark blue
+\definecolor{bg}{HTML}{f2f2f2}
 
 %\usepackage[pdftex]{graphicx} % For pictures.
 
 \usepackage{amssymb,amsmath,amsthm,amsfonts} % Math.
+
+\usepackage{minted} % For code blocks
+\usemintedstyle{emacs}
+\setminted{
+    frame=leftline,
+    framesep=2mm,
+    baselinestretch=1.2,
+    fontsize=\footnotesize,
+    bgcolor=bg,
+    linenos
+}
 
 \usepackage{hyperref} % Format links for pdf.
 \usepackage{lastpage} %Bruge til at få sidetal fra sidste side
