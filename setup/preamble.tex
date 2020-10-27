@@ -1,8 +1,13 @@
 \documentclass[12pt]{article}
 
+\usepackage[titletoc]{appendix}
 \usepackage[danish]{babel} % For Danish writing.
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[a4paper, margin=4cm]{geometry} % margins.
+\usepackage{pdfpages}
+
+\usepackage{verbatim}
 
 % Adds support for full page background picture
 \usepackage[contents={},color=gray]{background}
@@ -15,7 +20,8 @@
 
 \usepackage{amssymb,amsmath,amsthm,amsfonts} % Math.
 
-\usepackage{minted} % For code blocks
+% Styling of Code Blocks
+\usepackage{minted}
 \usemintedstyle{emacs}
 \setminted{
     frame=leftline,
@@ -23,7 +29,11 @@
     baselinestretch=1.2,
     fontsize=\footnotesize,
     bgcolor=bg,
-    linenos
+    linenos=true,
+    tabsize=1,
+    obeytabs=true,
+    mathescape=true,
+    breaklines
 }
 
 \usepackage{hyperref} % Format links for pdf.
@@ -32,9 +42,9 @@
 
 % Bibliografi
 \usepackage{csquotes} 
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber, sorting=none]{biblatex}
 \bibliography{bib.bib}
+\usepackage[nottoc,numbib]{tocbibind}
 
 % Ændr titel på indholdfortegnelse
 \addto\captionsdanish{\renewcommand{\contentsname}{Indholdsfortegnelse}}
-
