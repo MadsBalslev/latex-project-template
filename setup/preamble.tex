@@ -1,16 +1,19 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 
 \usepackage[titletoc]{appendix}
 \usepackage[danish]{babel} % For Danish writing.
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[a4paper, margin=4cm]{geometry} % margins.
-\usepackage{pdfpages}
 
 \usepackage{verbatim}
+\usepackage{float}
 
 % Adds support for full page background picture
 \usepackage[contents={},color=gray]{background}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage{caption}
 
 \usepackage{xcolor}
 \definecolor{aaublue}{RGB}{33,26,82}% dark blue
@@ -36,7 +39,8 @@
     breaklines
 }
 
-\usepackage{hyperref} % Format links for pdf.
+\usepackage{hyperref}
+
 \usepackage{lastpage} %Bruge til at få sidetal fra sidste side
 \usepackage{calc} % Reset counter after title page.
 
@@ -46,5 +50,14 @@
 \bibliography{bib.bib}
 \usepackage[nottoc,numbib]{tocbibind}
 
+% Noter i dokument
+\setlength{\marginparwidth}{3.5cm}
+\usepackage{todonotes}
+\linespread{1.25}
+
 % Ændr titel på indholdfortegnelse
 \addto\captionsdanish{\renewcommand{\contentsname}{Indholdsfortegnelse}}
+
+% the numbers mason, what do they mean?
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
