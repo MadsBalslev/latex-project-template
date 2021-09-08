@@ -1,4 +1,52 @@
-\documentclass[12pt]{report}
+\documentclass[12pt]{article}
+\usepackage[font=bf]{caption} 
+\usepackage[utf8]{inputenc}					
+\usepackage[danish]{babel}					% Dokumentets sprog
+\usepackage[T1]{fontenc}		
+\usepackage{amsmath,amsthm,amssymb,amsfonts,bm}
+\usepackage{ragged2e,anyfontsize}
+\usepackage{etex}
+\usepackage[titletoc]{appendix}
+\usepackage{thmtools}
+\usepackage[makeroom]{cancel}
+\usepackage{placeins}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage[danish]{varioref}
+\usepackage{dirtytalk}
+\usepackage{blindtext}
+\usepackage{etex}
+\usepackage{graphicx}
+\usepackage{flafter}
+\usepackage{float}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage{a4wide}
+\usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{colortbl}
+\usepackage{textcomp}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{tasks}
+\usepackage{commath}
+\usepackage{calc}
+\usepackage{pdfpages}
+\usepackage{xfrac}
+\usepackage{enumitem}
+\usepackage{varwidth}
+\usepackage{tasks}
+\usepackage[noend]{algpseudocode}
+\usepackage{tikz}
+\usetikzlibrary{angles}
+\usetikzlibrary{quotes}
+\usetikzlibrary{babel}
 
 \usepackage[titletoc]{appendix}
 \usepackage[danish]{babel} % For Danish writing.
@@ -6,7 +54,6 @@
 \usepackage[T1]{fontenc}
 \usepackage[a4paper, margin=4cm]{geometry} % margins.
 
-\usepackage{verbatim}
 \usepackage{float}
 
 % Adds support for full page background picture
@@ -41,6 +88,7 @@
 
 \usepackage{hyperref}
 
+
 \usepackage{lastpage} %Bruge til at få sidetal fra sidste side
 \usepackage{calc} % Reset counter after title page.
 
@@ -61,3 +109,21 @@
 % the numbers mason, what do they mean?
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{3}
+
+%Sidehoved
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+%\renewcommand{\chaptermark}[1]{ \markboth{\thechapter.\ #1}{}}
+\fancyheadoffset{0pt}
+\lhead{\nouppercase \rightmark}
+\rhead{Aalborg Universitet}
+%\renewcommand{\chaptermark}[1]
+%        {\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]
+        {\markright{\thesection\ #1}}
+\lfoot[\fancyplain{}{\bfseries\thepage}]
+    {\fancyplain{}{}}
+\rfoot[\fancyplain{}{}]%
+    {\fancyplain{}{\bfseries\thepage}}
+\patchcmd{\chapter}{plain}{fancy}{}{}
